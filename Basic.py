@@ -16,6 +16,7 @@ print("\n")
 
 car1 = Car("Toyota", "BMW", 2023, "Black")
 car2 = Car("Ford", "Mustang", 2023, "Yellow")
+car3 = Car("Ferrari", "Gollorado", 2024, "White")
 
 print(car1.type)
 print(car1.model)
@@ -34,3 +35,14 @@ print(car2.color)
 
 car2.drive()
 car2.stop()
+
+print("\n")
+
+print(car3.type)
+print(car3.model)
+print(car3.year)
+print(car3.color)
+
+car3.drive()
+car3.stop()
+
