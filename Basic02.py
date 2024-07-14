@@ -3,6 +3,7 @@ import random
 import os
 import test
 import test as t
+from car import Car
 
 temp = int(input("Enter a temperature: \n"))
 if(temp >=30 and temp <=45):
@@ -268,3 +269,109 @@ hi()
 hello()
 
 help("modules")
+
+car1 = Car("Toyota", "BMW", 2023, "Black")
+car2 = Car("Ford", "Mustang", 2023, "Yellow")
+car3 = Car("Ferrari", "Gollorado", 2024, "White")
+
+print(car1.type)
+print(car1.model)
+print(car1.year)
+print(car1.color)
+
+car1.drive()
+car1.stop()
+
+print("\n")
+
+print(car2.type)
+print(car2.model)
+print(car2.year)
+print(car2.color)
+
+car2.drive()
+car2.stop()
+
+print("\n")
+
+print(car3.type)
+print(car3.model)
+print(car3.year)
+print(car3.color)
+
+car3.drive()
+car3.stop()
+
+car1 = Car()
+car2 = Car()
+car1.wheels = 6
+
+print(car1.wheels)
+print(car2.wheels)
+
+class Animal1:
+
+    alive = True
+    def __init__(self, name):
+        self.name = name
+
+    def eat(self):
+        print("Animal is eating")
+
+class Animal2:
+
+    def __init__(self, name):
+        self.name = name
+
+    def sleep(self):
+        print(self.name, "is sleeping")
+        return self
+
+    def eat(self):
+        print(self.name, "is eating")
+        return self
+
+    def walk(self):
+        print(self.name, "is walking")
+        return self
+
+    def fly(self):
+        print(self.name, "is flying")
+        return self
+
+class cat(Animal1):
+
+    def walk(self):
+        print("Cat is walking")
+
+    def eat(self):
+        print("Eating")
+
+class fish(Animal2):
+
+    def swim(self):
+        print("Fish is swimming")
+
+class parrot(Animal1, Animal2):
+
+    def fly(self):
+        print("Cat is flying")
+
+Cat = cat()
+Fish = fish("Fish")
+Parrot = parrot("Parrot")
+
+print("Cat is alive:", Cat.alive)
+
+Cat.eat()
+Fish.sleep()
+
+Parrot.eat()
+Parrot.sleep()
+
+animal2 = Animal2("Monster")
+animal2.fly()\
+    .sleep()\
+    .eat()\
+    .walk()
+
